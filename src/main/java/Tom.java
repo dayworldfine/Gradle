@@ -137,7 +137,7 @@ public class Tom implements ActionListener{
              if (folder.exists() && txt.exists()){
                  try {
                      fis = new FileInputStream(txt);
-                     isr = new InputStreamReader(fis, "UTF-8");
+                     isr = new InputStreamReader(fis, "GBK");
                      br = new BufferedReader(isr);
                      String line = "";
                      while ((line = br.readLine()) != null) {
