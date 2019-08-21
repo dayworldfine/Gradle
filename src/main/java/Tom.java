@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.*;
 import java.util.Arrays;
 
@@ -118,9 +120,13 @@ public class Tom implements ActionListener{
         jFrame.setLocation(800, 300);
         jFrame.setSize(700, 600);
         jFrame.setBackground(Color.darkGray);
-
         jFrame.setResizable(true);
         jFrame.setVisible(true);
+        jFrame.addWindowListener(new WindowAdapter(){
+            public void windowClosing(WindowEvent e){
+                System.exit(0);
+            }
+        });
     }
     @Override
     public void actionPerformed(ActionEvent view) {
