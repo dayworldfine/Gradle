@@ -143,7 +143,7 @@ public class Tom implements ActionListener{
              if (folder.exists() && txt.exists()){
                  try {
                      fis = new FileInputStream(txt);
-                     isr = new InputStreamReader(fis, "GBK");
+                     isr = new InputStreamReader(fis, "UTF-8");
                      br = new BufferedReader(isr);
                      String line = "";
                      while ((line = br.readLine()) != null) {
@@ -235,11 +235,11 @@ public class Tom implements ActionListener{
             //创建文件夹
             File folder = new File("D:\\tomShow");
             //判断该文件夹是否存在
-            if(!folder.exists()){
+            if(!folder.isDirectory()){
                 //可以创建
                 try {
-                    folder.createNewFile();
-                }catch (IOException e){
+                    folder.mkdirs();
+                }catch (Exception e){
                     e.printStackTrace();
                 }
             }
