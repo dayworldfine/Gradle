@@ -4,4 +4,4 @@
 
 运行展示如下
 
-![image](https://github.com/dayworldfine/Gradle/blob/master/show.png)
+![image](https://markdown.tomtangmu.com/git/pwdTool/show.png)
